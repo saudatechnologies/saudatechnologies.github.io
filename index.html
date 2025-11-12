@@ -1,72 +1,321 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Политика конфиденциальности — Ваша компания</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ТОО "Sauda Technologies" — Политика конфиденциальности</title>
+  <!-- Если нужно верифицировать сайт в Google Search Console: вставьте сюда мета-тег, который выдаст GSC -->
+  <!-- <meta name="google-site-verification" content="ВАШ_КОД_ЗДЕСЬ" /> -->
+
+  <!-- Рекомендуется добавить эти метатеги для красивого предпросмотра в мессенджерах -->
+  <meta name="description" content="Политика конфиденциальности B2B-маркетплейса EasySauda — ТОО Sauda Technologies. Контакты: sauda_tech@outlook.com" />
+  <meta property="og:title" content="ТОО \"Sauda Technologies\" — Политика конфиденциальности" />
+  <meta property="og:description" content="B2B рынок в надежных руках — Политика конфиденциальности EasySauda" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: #f9fafb;
-      color: #333;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
+    :root{
+      --bg: #f7fafc;
+      --card: #ffffff;
+      --muted: #6b7280;
+      --text: #0f172a;
+      --primary: #37B2AD; /* заданный цвет */
+      --primary-600: #2ea6a0;
+      --accent: #e6fffb;
+      --glass: rgba(255,255,255,0.6);
     }
-    header {
-      background: #1f2937;
-      color: white;
-      padding: 1rem 2rem;
-      text-align: center;
+    [data-theme="dark"]{
+      --bg: #0b1220;
+      --card: #071021;
+      --muted: #9ca3af;
+      --text: #e6eef6;
+      --accent: rgba(55,178,173,0.12);
+      --glass: rgba(255,255,255,0.03);
     }
-    main {
-      max-width: 800px;
-      margin: 2rem auto;
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--bg), #ffffff 60%);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
+      padding:32px;
     }
-    h1, h2 {
-      color: #111827;
+
+    .container{max-width:1100px;margin:0 auto}
+
+    header.site{
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      margin-bottom:28px;
     }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #f3f4f6;
-      color: #6b7280;
-      margin-top: 2rem;
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{
+      width:56px;height:56px;border-radius:12px;display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--primary),var(--primary-600));
+      box-shadow:0 6px 18px rgba(55,178,173,0.15);
+      color:white;font-weight:700;font-size:18px
     }
-    a {
-      color: #2563eb;
-      text-decoration: none;
+    .brand h1{margin:0;font-size:18px}
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+
+    .controls{display:flex;gap:10px;align-items:center}
+    .toggle{
+      --w:48px; --h:28px;
+      width:var(--w);height:var(--h);background:var(--glass);border-radius:999px;padding:4px;display:flex;align-items:center;cursor:pointer
     }
-    a:hover {
-      text-decoration: underline;
+    .toggle .knob{width:20px;height:20px;border-radius:50%;background:linear-gradient(180deg,#fff, #f3f7f9);box-shadow:0 2px 6px rgba(2,6,23,0.08);transform:translateX(0);transition:transform .28s cubic-bezier(.2,.9,.3,1)}
+    [data-theme="dark"] .toggle .knob{transform:translateX(20px)}
+
+    main.card{
+      background:var(--card);border-radius:14px;padding:28px;box-shadow:0 8px 30px rgba(15,23,42,0.06);
+      display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:start;
     }
+    @media (max-width:880px){main.card{grid-template-columns:1fr;padding:20px} .aside{order:2}}
+
+    .hero{
+      display:flex;flex-direction:column;gap:12px;margin-bottom:8px
+    }
+    .hero h2{margin:0;font-size:20px}
+    .hero p.lead{margin:0;color:var(--muted)}
+
+    .policy{max-width:100%}
+    .policy h3{margin-top:18px;margin-bottom:8px}
+    .policy p, .policy li{color:var(--text);font-size:15px}
+    .policy ol{padding-left:18px}
+    .policy pre{white-space:pre-wrap;background:transparent;padding:8px;border-radius:8px}
+
+    .aside{position:sticky;top:28px;background:linear-gradient(180deg,var(--accent),transparent);padding:18px;border-radius:12px;border:1px solid rgba(0,0,0,0.03)}
+    .card-title{font-weight:600;margin-bottom:10px}
+    .contact-list{font-size:14px;color:var(--muted);line-height:1.5}
+    .contact-list a{color:var(--primary);text-decoration:none}
+
+    footer.site{margin-top:18px;padding-top:12px;color:var(--muted);text-align:center;font-size:13px}
+
+    /* subtle anchor styles */
+    a.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--primary);color:white;text-decoration:none;font-weight:600;box-shadow:0 8px 24px rgba(55,178,173,0.12)}
+
+    /* small responsive tweaks */
+    @media (max-width:520px){body{padding:18px} .logo{width:48px;height:48px;font-size:16px}}
+
+    /* print-friendly */
+    @media print{body{background:white;color:black} .controls, .toggle{display:none} }
+
   </style>
 </head>
-<body>
-  <header>
-    <h1>Sauda Technologies</h1>
-  </header>
-  <main>
-    <h2>Политика конфиденциальности</h2>
-    <p>
-      Здесь разместите текст вашей политики конфиденциальности. Опишите, какие данные вы собираете, как их используете и как можно связаться с вами.
-    </p>
+<body data-theme="light">
+  <div class="container">
+    <header class="site">
+      <div class="brand">
+        <div class="logo" aria-hidden>ST</div>
+        <div>
+          <h1>ТОО "Sauda Technologies"</h1>
+          <p>B2B рынок в надежных руках</p>
+        </div>
+      </div>
 
-    <h2>Контакты</h2>
-    <p>
-      ТОО «Sauda Technologies»<br>
-      Email: <a href="mailto:info@company.com">sauda_tech@outlook.com</a><br>
-      Телефон: +7 (999) 123-45-67<br>
-      Адрес: Астана, ул. Заебись, д. 1
-    </p>
-  </main>
-  <footer>
-    &copy; 2025 Ваша компания. Все права защищены.
-  </footer>
+      <div class="controls">
+        <div title="Переключить свет/тёмную тему" class="toggle" id="themeToggle" role="button" aria-pressed="false">
+          <div class="knob"></div>
+        </div>
+        <a class="btn" href="mailto:sauda_tech@outlook.com">Связаться</a>
+      </div>
+    </header>
+
+    <main class="card" role="main">
+      <section class="policy" aria-labelledby="policyTitle">
+        <div class="hero">
+          <h2 id="policyTitle">Политика конфиденциальности — EasySauda</h2>
+          <p class="lead">Полный текст политики конфиденциальности для B2B-маркетплейса EasySauda (ТОО "Sauda Technologies").</p>
+        </div>
+
+        <!-- Вставлен текст политики, который вы предоставили -->
+
+        <h3>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ B2B-МАРКЕТПЛЕЙСА «EASYSAUDA»</h3>
+
+        <ol>
+          <li>
+            <strong>Общие положения</strong>
+            <ol>
+              <li>1.1. Настоящая Политика конфиденциальности (далее — «Политика") определяет порядок сбора, хранения, обработки и передачи персональных данных пользователей сервиса «EasySauda» (далее — «Сервис»), включая веб-платформу для Дистрибьюторов и мобильное приложение для Торговых точек.</li>
+              <li>1.2. Оператором персональных данных является:
+                <pre>ТОО «Sauda Technologies",
+БИН/ИИН: 251040031022,
+Юридический адрес: Казахстан, город Астана, район Есиль, улица Әлихан Бөкейхан, дом 11, почтовый индекс 010000.
+Контактный e-mail: sauda_tech@outlook.com</pre>
+              </li>
+              <li>1.3. Настоящая Политика разработана в соответствии с требованиями Закона Республики Казахстан «О персональных данных и их защите», а также международных требований к обработке персональных данных при публикации мобильных приложений в App Store и Google Play.</li>
+              <li>1.4. Используя Сервис, Пользователь выражает согласие с условиями настоящей Политики. Согласие предоставляется путём активного действия — нажатия кнопки «Я согласен» при регистрации или первом входе в Сервис, либо продолжения использования Сервиса после ознакомления с текстом Политики. Согласие является конкретным, информированным и сознательным, действует на срок существования учётной записи и до момента его отзыва.
+                <br>Полный текст настоящей Политики конфиденциальности доступен Пользователю до момента регистрации и в любой момент в интерфейсе Сервиса). В Политике чётко указаны:
+                <ul>
+                  <li>перечень персональных данных (п. 3.1–3.3);</li>
+                  <li>цели обработки (п. 3.1–3.3);</li>
+                  <li>срок действия согласия (до удаления учётной записи или отзыва);</li>
+                  <li>информация о передаче третьим лицам (п. 5.1–5.3);</li>
+                  <li>трансграничная передача (п. 8.1, при наличии);</li>
+                  <li>право на отзыв согласия (п. 7.1).</li>
+                </ul>
+                Факт ознакомления и принятия Политики фиксируется в логах системы с указанием даты, времени и IP-адреса. Отзыв согласия возможен в любой момент через e-mail: sauda_tech@outlook.com.
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <strong>Архитектура Сервиса и роли пользователей</strong>
+            <ol>
+              <li>2.1. Сервис EasySauda является B2B-маркетплейсом, предназначенным для взаимодействия между Дистрибьюторами и Торговыми точками (Покупателями).</li>
+              <li>Дистрибьютор (веб-версия) — осуществляет прием и обработку заявок, ведение клиентской базы, управление каталогом, ценами, акциями и аналитикой.</li>
+              <li>Торговая точка (мобильное приложение) — размещает заказы, просматривает каталоги и цены, согласовывает изменения и получает уведомления о статусах заказов.</li>
+              <li>Администратор платформы (Оператор) — обеспечивает модерацию, ручную верификацию, техническую поддержку и обработку обращений.</li>
+            </ol>
+          </li>
+
+          <li>
+            <strong>Сбор и обработка персональных данных</strong>
+            <ol>
+              <li>
+                <em>3.1. Данные Дистрибьюторов (веб-платформа)</em>
+                <p>Собираемые данные: Наименование компании, БИН/ИИН, банковские реквизиты, юридический адрес; Сертификаты на товары (в виде файлов); Сайт (если имеется); ФИО представителя, должность, корпоративный e-mail, рабочий телефон.</p>
+                <p>Цели обработки: Верификация и заключение договора с юридическим лицом; Администрирование аккаунта; Обеспечение обратной связи и коммуникации между сторонами; Соблюдение требований законодательства РК в части бухгалтерского и налогового учета.</p>
+              </li>
+
+              <li>
+                <em>3.2. Данные Торговых точек (мобильное приложение)</em>
+                <p>Собираемые данные: Наименование магазина, юридическое и фактическое адреса; Регион, город, контактный телефон и корпоративная почта; ФИО представителя, время работы магазина; Данные аккаунта: логин (e-mail), телефон, хэшированный пароль.</p>
+                <p>Цели обработки: Идентификация и верификация Торговой точки Администратором; Обеспечение исполнения заказов Дистрибьюторами; Организация доставки и связи по заказам; Поддержка и реагирование на запросы пользователей.</p>
+              </li>
+
+              <li>
+                <em>3.3. Автоматически собираемые данные (веб и мобильная версия)</em>
+                <p>Собираемые данные: IP-адрес, тип и модель устройства, версия операционной системы; Уникальный ID устройства, данные об активности (история заказов, просмотры, клики); Логи ошибок и технические параметры работы приложения.</p>
+                <p>Цели обработки: Поддержание стабильной работы Сервиса; Повышение безопасности и защита от несанкционированного доступа; Проведение аналитики и улучшение пользовательского опыта; Отправка уведомлений о критических статусах заказов.</p>
+              </li>
+            </ol>
+          </li>
+
+          <li>
+            <strong>Использование разрешений мобильного приложения</strong>
+            <p>На данный момент приложение не использует разрешений.</p>
+          </li>
+
+          <li>
+            <strong>Передача персональных данных третьим лицам</strong>
+            <ol>
+              <li>5.1. Сервис передает персональные данные только в объеме, необходимом для исполнения функций Сервиса: — данные Торговой точки передаются выбранному Дистрибьютору при оформлении заказа; — данные Дистрибьютора (наименование, контакты) становятся доступны Торговой точке для связи и согласования. В течение 10 (десяти) рабочих дней с момента передачи Оператор уведомляет Пользователя о факте передачи (по e-mail или в интерфейсе Сервиса).</li>
+              <li>5.2. Платформа не продает и не передает персональные данные третьим лицам в коммерческих целях.</li>
+              <li>5.3. При интеграции с платежным шлюзом (эквайрингом) данные передаются только в объеме, необходимом для проведения транзакции: сумма, идентификатор заказа и идентификатор пользователя. Платформа не собирает и не хранит банковские реквизиты или данные платежных карт. Ответственность за обработку и защиту платежных данных несет Банк-партнер.</li>
+            </ol>
+          </li>
+
+          <li>
+            <strong>Хранение и защита данных</strong>
+            <ol>
+              <li>6.1. Все персональные данные хранятся на защищенных серверах, расположенных на территории Республики Казахстан или в странах, обеспечивающих адекватную защиту персональных данных.</li>
+              <li>6.2. Оператор принимает технические и организационные меры для защиты данных от утраты, несанкционированного доступа, изменения или уничтожения. Передача персональных данных, в том числе при работе мобильного приложения, осуществляется по защищенным протоколам.</li>
+              <li>6.3. Доступ к персональным данным имеют только уполномоченные сотрудники, обязанные соблюдать конфиденциальность.</li>
+            </ol>
+          </li>
+
+          <li>
+            <strong>Права субъекта персональных данных</strong>
+            <ol>
+              <li>7.1. Пользователь имеет право: получать информацию о своих персональных данных, обрабатываемых Оператором; требовать уточнения, блокирования или уничтожения данных, если они являются неполными, устаревшими или незаконно полученными; отзывать согласие на обработку персональных данных; инициировать удаление аккаунта через мобильное приложение или по запросу на e-mail sauda_tech@outlook.com. Запросы обрабатываются в течение 10 (десяти) рабочих дней с момента получения. Уведомление о результате направляется Пользователю по e-mail или в интерфейсе Сервиса.</li>
+              <li>7.2. После удаления аккаунта данные Пользователя уничтожаются, за исключением сведений, подлежащих хранению в соответствии с законодательством Республики Казахстан (например, данные о финансовых операциях и накладных).</li>
+            </ol>
+          </li>
+
+          <li>
+            <strong>Международная передача данных</strong>
+            <p>8.1. В случае использования облачных сервисов и систем аналитики, расположенных за пределами Республики Казахстан, передача персональных данных осуществляется только при условии соблюдения принципов защиты, эквивалентных казахстанскому законодательству.</p>
+          </li>
+
+          <li>
+            <strong>Срок хранения данных</strong>
+            <p>9.1. Персональные данные хранятся в течение срока действия учетной записи и не более 3 (трех) лет после её удаления, если иное не предусмотрено законодательством Республики Казахстан (например, для целей бухгалтерского, налогового учета или исполнения судебных актов).</p>
+          </li>
+
+          <li>
+            <strong>Обновления и изменения Политики</strong>
+            <ol>
+              <li>10.1. Оператор оставляет за собой право изменять настоящую Политики. Актуальная версия всегда доступна в мобильном приложении.</li>
+              <li>10.2. Продолжение использования Сервиса после публикации обновленной версии Политики означает согласие с её условиями.</li>
+            </ol>
+          </li>
+
+          <li>
+            <strong>Реквизиты оператора</strong>
+            <pre>Оператор Платформы: ТОО «Sauda Technologies"
+БИН / ИИН: 251040031022
+Юридический адрес: Казахстан, город Астана, район Есиль, улица Әлихан Бөкейхан, дом 11, почтовый индекс 010000
+Электронная почта: sauda_tech@outlook.com
+Веб-сайт: https://EasySauda.kz</pre>
+          </li>
+
+          <li>
+            <strong>Контакт для обращений</strong>
+            <p>Все вопросы, связанные с обработкой, изменением или удалением персональных данных, направляются на электронный адрес: <a href="mailto:sauda_tech@outlook.com">sauda_tech@outlook.com</a></p>
+          </li>
+        </ol>
+
+      </section>
+
+      <aside class="aside" aria-label="Контакты и действия">
+        <div>
+          <div class="card-title">Контакты</div>
+          <div class="contact-list">
+            <div><strong>Эл. почта:</strong> <a href="mailto:sauda_tech@outlook.com">sauda_tech@outlook.com</a></div>
+            <div><strong>Город:</strong> Астана, Казахстан</div>
+            <div style="margin-top:10px"><strong>Юридический адрес:</strong><br>район Есиль, улица Әлихан Бөкейхан, дом 11, 010000</div>
+          </div>
+
+          <div style="margin-top:16px">
+            <a class="btn" href="mailto:sauda_tech@outlook.com">Написать нам</a>
+          </div>
+
+          <div style="margin-top:16px;font-size:13px;color:var(--muted)">
+            Подходит для использования в Apple App Store / Google Play как URL политики конфиденциальности.
+            Для проверки в Google Search Console — добавьте мета-тег в <code>&lt;head&gt;</code> или используйте метод DNS.
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site">&copy; 2025 ТОО "Sauda Technologies" — B2B рынок в надежных руках</footer>
+
+  </div>
+
+  <script>
+    (function(){
+      const root = document.documentElement;
+      const body = document.body;
+      // init theme from localStorage or default light
+      const stored = localStorage.getItem('sauda-theme');
+      const isDark = stored === 'dark';
+      if(isDark){ body.setAttribute('data-theme','dark'); }
+      const toggle = document.getElementById('themeToggle');
+      toggle.addEventListener('click', ()=>{
+        const cur = body.getAttribute('data-theme');
+        if(cur === 'dark'){
+          body.setAttribute('data-theme','light');
+          localStorage.setItem('sauda-theme','light');
+          toggle.setAttribute('aria-pressed','false');
+        } else {
+          body.setAttribute('data-theme','dark');
+          localStorage.setItem('sauda-theme','dark');
+          toggle.setAttribute('aria-pressed','true');
+        }
+      });
+
+      // accessibility: allow keyboard toggle
+      toggle.tabIndex = 0;
+      toggle.addEventListener('keydown', (e)=>{ if(e.key === 'Enter' || e.key === ' ') toggle.click(); });
+
+    })();
+  </script>
 </body>
 </html>
-
