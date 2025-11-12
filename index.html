@@ -4,16 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ТОО "Sauda Technologies" — Политика конфиденциальности</title>
-  <!-- Если нужно верифицировать сайт в Google Search Console: вставьте сюда мета-тег, который выдаст GSC -->
-  <!-- <meta name="google-site-verification" content="ВАШ_КОД_ЗДЕСЬ" /> -->
 
-  <!-- Рекомендуется добавить эти метатеги для красивого предпросмотра в мессенджерах -->
   <meta name="description" content="Политика конфиденциальности B2B-маркетплейса EasySauda — ТОО Sauda Technologies. Контакты: sauda_tech@outlook.com" />
-  <meta property="og:title" content="ТОО \"Sauda Technologies\" — Политика конфиденциальности" />
+  <meta property="og:title" content="ТОО 'Sauda Technologies' — Политика конфиденциальности" />
   <meta property="og:description" content="B2B рынок в надежных руках — Политика конфиденциальности EasySauda" />
   <meta property="og:type" content="website" />
 
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -22,7 +18,7 @@
       --card: #ffffff;
       --muted: #6b7280;
       --text: #0f172a;
-      --primary: #37B2AD; /* заданный цвет */
+      --primary: #37B2AD;
       --primary-600: #2ea6a0;
       --accent: #e6fffb;
       --glass: rgba(255,255,255,0.6);
@@ -87,8 +83,24 @@
     .policy{max-width:100%}
     .policy h3{margin-top:18px;margin-bottom:8px}
     .policy p, .policy li{color:var(--text);font-size:15px}
-    .policy ol{padding-left:18px}
     .policy pre{white-space:pre-wrap;background:transparent;padding:8px;border-radius:8px}
+
+    /* 🔹 Изменение: отключаем нумерацию у списков */
+    .policy ol {
+      list-style: none;
+      counter-reset: none;
+      padding-left: 0;
+      margin-left: 0;
+    }
+
+    .policy li {
+      margin-bottom: 10px;
+    }
+
+    .policy ul {
+      list-style: none;
+      padding-left: 16px;
+    }
 
     .aside{position:sticky;top:28px;background:linear-gradient(180deg,var(--accent),transparent);padding:18px;border-radius:12px;border:1px solid rgba(0,0,0,0.03)}
     .card-title{font-weight:600;margin-bottom:10px}
@@ -97,13 +109,10 @@
 
     footer.site{margin-top:18px;padding-top:12px;color:var(--muted);text-align:center;font-size:13px}
 
-    /* subtle anchor styles */
     a.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--primary);color:white;text-decoration:none;font-weight:600;box-shadow:0 8px 24px rgba(55,178,173,0.12)}
 
-    /* small responsive tweaks */
     @media (max-width:520px){body{padding:18px} .logo{width:48px;height:48px;font-size:16px}}
 
-    /* print-friendly */
     @media print{body{background:white;color:black} .controls, .toggle{display:none} }
 
   </style>
@@ -261,7 +270,6 @@
         </ol>
 
       </section>
-
       <aside class="aside" aria-label="Контакты и действия">
         <div>
           <div class="card-title">Контакты</div>
@@ -279,14 +287,11 @@
     </main>
 
     <footer class="site">&copy; 2025 ТОО "Sauda Technologies" — B2B рынок в надежных руках</footer>
-
   </div>
 
   <script>
     (function(){
-      const root = document.documentElement;
       const body = document.body;
-      // init theme from localStorage or default light
       const stored = localStorage.getItem('sauda-theme');
       const isDark = stored === 'dark';
       if(isDark){ body.setAttribute('data-theme','dark'); }
@@ -303,11 +308,8 @@
           toggle.setAttribute('aria-pressed','true');
         }
       });
-
-      // accessibility: allow keyboard toggle
       toggle.tabIndex = 0;
       toggle.addEventListener('keydown', (e)=>{ if(e.key === 'Enter' || e.key === ' ') toggle.click(); });
-
     })();
   </script>
 </body>
